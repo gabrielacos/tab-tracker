@@ -12,11 +12,11 @@ const sequelize = new Sequelize(
 )
 
 fs
-  .readSync(__dirname)
+  .readdirSync(__dirname)
   .filter((file) =>
     file !== 'index.js'
   )
-  .foreach((file) => {
+  .forEach((file) => {
     const model = sequelize.import(path.join(__dirname, file))
     db[model.name] = model
   })

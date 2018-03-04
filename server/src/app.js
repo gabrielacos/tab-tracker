@@ -10,7 +10,7 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
-require('./routes')(app)
+require('./route')(app)
 
 sequelize.sync()
   .then(() => {
