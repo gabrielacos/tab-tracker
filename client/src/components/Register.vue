@@ -30,7 +30,6 @@
 
 <script>
 import PageHeader from '@/components/Header.vue'
-
 import AuthenticationService from "@/service/AuthenticationService";
 export default {
   data() {
@@ -40,6 +39,7 @@ export default {
       error: null
     };
   },
+
 
   methods: {
     async register() {
@@ -58,7 +58,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.error {
-  color: red;
-}
+
 </style>
